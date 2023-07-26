@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toronto 2023</title>
+    <script src="https://kit.fontawesome.com/698c813efd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+
+
+        <h1>Toronto 2023</h1>
+
+        <button class="accordion">Saturday, August 12</button>
+        <div class="accordion-panel">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Time</th>
+                        <th>Description</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fa-solid fa-plane"></i></td>
+                        <td>5:00a.m. PST - 3:11pm EST</td>
+                        <td>Flight LAX to Toronto</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-shop"></i></td>
+                        <td></td>
+                        <td>St Lawrence Market</td>
+                        <td>Busters Sea Cove lobster rolls</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-building-columns"></i></td>
+                        <td style="color: red;">8:00p.m. Reservation</td>
+                        <td>Museum of Illusions</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button class="accordion">Sunday, August 13</button>
+        <div class="accordion-panel">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Time</th>
+                        <th>Description</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fa-solid fa-utensils"></i></td>
+                        <td style="color: red;">9:30a.m. Reservation</td>
+                        <td>Eggspectation</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-building-columns"></i></td>
+                        <td></td>
+                        <td>Royal Ontario Museum</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-shop"></i></td>
+                        <td></td>
+                        <td>Kensington Market</td>
+                        <td>Frescos poutine</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-shop"></i></td>
+                        <td></td>
+                        <td>Little Italy</td>
+                        <td>Bitondo's pizza</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-utensils"></i></td>
+                        <td style="color: red;">6:45p.m. Reservation</td>
+                        <td>Enoteca Sociale (Italian)</td>
+                        <td>Off menu carbonara</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button class="accordion">Monday, August 14</button>
+        <div class="accordion-panel">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Time</th>
+                        <th>Description</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fa-solid fa-utensils"></i></td>
+                        <td style="color: red;">9:30a.m. Reservation</td>
+                        <td>Mildred's Temple Kitchen</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-shop"></i></td>
+                        <td>Open 10a.m. - 9p.m.</td>
+                        <td>Toronto Premium Outlets</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-water"></i></td>
+                        <td></td>
+                        <td>Niagara Falls</td>
+                        <td>The Floral Clock, Queen Street</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-utensils"></i></td>
+                        <td style="color: red;">5:30p.m. Reservation</td>
+                        <td>The Kasbah Mediterranean</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button class="accordion">Tuesday, August 15</button>
+        <div class="accordion-panel">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Time</th>
+                        <th>Description</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fa-solid fa-building-columns"></i></td>
+                        <td></td>
+                        <td>Art Gallery of Ontario</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-shop"></i></td>
+                        <td></td>
+                        <td>Distillery District</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-plane"></i></td>
+                        <td style="color: red;">8:30p.m. EST - 10:42p.m. PST</td>
+                        <td>Toronto to LAX</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer"></div>
+
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("accordion-active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+                this.blur(); // Remove focus from the accordion
+            });
+        }
+    </script>
+</body>
+</html>
